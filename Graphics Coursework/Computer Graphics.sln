@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libENUgraphics", "libENUgraphics\libENUgraphics.vcxproj", "{A943724C-1DC0-4711-9539-B78A8D6ECEC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{96425147-A5FD-4D64-8E08-00A3BF701D94}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Coursework", "024 Sphere by Subdivision\024 Sphere by Subdivision.vcxproj", "{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cubemaps", "cubemaps", "{14E37B48-E917-4E19-A149-424E1804BE20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "alien", "alien", "{BA8DDBB3-E471-41F3-B2A4-0453CE15DF4F}"
+	ProjectSection(SolutionItems) = preProject
+		resources\textures\cubemaps\alien\negx.png = resources\textures\cubemaps\alien\negx.png
+		resources\textures\cubemaps\alien\negy.png = resources\textures\cubemaps\alien\negy.png
+		resources\textures\cubemaps\alien\negz.png = resources\textures\cubemaps\alien\negz.png
+		resources\textures\cubemaps\alien\posx.png = resources\textures\cubemaps\alien\posx.png
+		resources\textures\cubemaps\alien\posy.png = resources\textures\cubemaps\alien\posy.png
+		resources\textures\cubemaps\alien\posz.png = resources\textures\cubemaps\alien\posz.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A943724C-1DC0-4711-9539-B78A8D6ECEC7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A943724C-1DC0-4711-9539-B78A8D6ECEC7}.Debug|Win32.Build.0 = Debug|Win32
+		{A943724C-1DC0-4711-9539-B78A8D6ECEC7}.Release|Win32.ActiveCfg = Release|Win32
+		{A943724C-1DC0-4711-9539-B78A8D6ECEC7}.Release|Win32.Build.0 = Release|Win32
+		{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}.Debug|Win32.Build.0 = Debug|Win32
+		{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}.Debug|Win32.Deploy.0 = Debug|Win32
+		{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}.Release|Win32.ActiveCfg = Release|Win32
+		{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14E37B48-E917-4E19-A149-424E1804BE20} = {96425147-A5FD-4D64-8E08-00A3BF701D94}
+		{BA8DDBB3-E471-41F3-B2A4-0453CE15DF4F} = {14E37B48-E917-4E19-A149-424E1804BE20}
+	EndGlobalSection
+EndGlobal

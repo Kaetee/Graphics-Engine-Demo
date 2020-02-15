@@ -1,0 +1,47 @@
+#version 440
+
+//uniforms
+uniform mat4 MVP;
+uniform bool DEBUG_MODE;
+uniform float VERTEX_NORMAL_SCALE = 3.0;
+uniform float FACE_NORMAL_SCALE = 6.0;
+uniform mat3 N;
+uniform sampler2D heightmap;
+
+uniform vec3 eye_pos;
+
+uniform float time;
+
+layout(triangles) in; 		// set input type to triangles - 3 vertices
+layout(triangle_strip, max_vertices = 10) out;										// set output to line_strip - 2 vertices
+	
+// incomings
+layout(location = 0) in vec3 positions[];
+layout(location = 1) in vec3 vertex_normal[];
+layout(location = 2) in vec2 tex_coord_in[];
+layout(location = 3) in vec4 vertex_colourVs[];
+
+// outgoings
+layout(location = 0) out vec3 out_pos;
+layout(location = 1) out vec3 out_normal;
+layout(location = 2) out vec2 tex_coord_out;
+layout(location = 3) out vec4 out_colour;
+
+
+
+void main() {
+	if (1 == 1) {
+		for (int i = 0; i < gl_in.length(); ++i) {
+			out_colour = vertex_colourVs[i];
+			tex_coord_out = tex_coord_in[i];
+
+			out_normal = vertex_normal[i];
+			
+			out_pos = positions[i];
+
+			gl_Position = gl_in[i].gl_Position;											// apply textures
+			EmitVertex();														// send points
+		}
+		EndPrimitive();		
+	}
+}

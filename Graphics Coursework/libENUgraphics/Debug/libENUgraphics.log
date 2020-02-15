@@ -1,0 +1,38 @@
+﻿Build started 18/04/2016 21:25:15.
+     1>Project "C:\Graphics Coursework\libENUgraphics\libENUgraphics.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\libENUgraphics.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt app.cpp depth_buffer.cpp frame_buffer.cpp renderer.cpp shadow_map.cpp terrain.cpp texture.cpp
+         app.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         texture.cpp
+         terrain.cpp
+         shadow_map.cpp
+         renderer.cpp
+         frame_buffer.cpp
+         depth_buffer.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Graphics Coursework\Debug\libENUgraphics.lib" /NOLOGO Debug\app.obj
+         Debug\arc_ball_camera.obj
+         Debug\chase_camera.obj
+         Debug\cubemap.obj
+         Debug\depth_buffer.obj
+         Debug\directional_light.obj
+         Debug\effect.obj
+         Debug\frame_buffer.obj
+         Debug\free_camera.obj
+         Debug\geometry.obj
+         Debug\geometry_builder.obj
+         Debug\renderer.obj
+         Debug\shadow_map.obj
+         Debug\stdafx.obj
+         Debug\target_camera.obj
+         Debug\terrain.obj
+         Debug\texture.obj
+         Debug\util.obj
+         libENUgraphics.vcxproj -> C:\Graphics Coursework\Debug\libENUgraphics.lib
+     1>Done Building Project "C:\Graphics Coursework\libENUgraphics\libENUgraphics.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.90

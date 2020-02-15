@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F4F1FB7-C7AB-4524-993E-25BCF3FA08CB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My024SpherebySubdivision</RootNamespace>
+    <ProjectName>Coursework</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\graphics.props" />
+    <Import Project="..\graphics_framework.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\graphics.props" />
+    <Import Project="..\graphics_framework.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libENUgraphics\libENUgraphics.vcxproj">
+      <Project>{a943724c-1dc0-4711-9539-b78a8d6ecec7}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dark.cpp" />
+    <ClCompile Include="light.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="maths.cpp" />
+    <ClCompile Include="post_processor.cpp" />
+    <ClCompile Include="weather_gen.cpp" />
+    <ClCompile Include="world_gen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dark.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="maths.h" />
+    <ClInclude Include="post_processor.h" />
+    <ClInclude Include="scene_object.h" />
+    <ClInclude Include="weather_gen.h" />
+    <ClInclude Include="world_gen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="blend.frag" />
+    <None Include="bloom.frag" />
+    <None Include="blur_h.frag" />
+    <None Include="blur_v.frag" />
+    <None Include="cel.frag" />
+    <None Include="contrast.frag" />
+    <None Include="dark.frag" />
+    <None Include="dark.vert" />
+    <None Include="darkbloom.frag" />
+    <None Include="direction.frag" />
+    <None Include="direction.vert" />
+    <None Include="edge.frag" />
+    <None Include="edge_detect.frag" />
+    <None Include="greyscale.frag" />
+    <None Include="invert.frag" />
+    <None Include="light.frag" />
+    <None Include="light.vert" />
+    <None Include="map.frag" />
+    <None Include="map.geometry" />
+    <None Include="map.vert" />
+    <None Include="normal_map.frag" />
+    <None Include="output.frag" />
+    <None Include="output.vert" />
+    <None Include="phong.frag" />
+    <None Include="phong.vert" />
+    <None Include="postproc_rain.frag" />
+    <None Include="postproc_rain.vert" />
+    <None Include="postproc_water.frag" />
+    <None Include="postproc_water.vert" />
+    <None Include="rain.frag" />
+    <None Include="rain.geometry" />
+    <None Include="rain.vert" />
+    <None Include="screen.vert" />
+    <None Include="sepia.frag" />
+    <None Include="skybox.frag" />
+    <None Include="skybox.vert" />
+    <None Include="snow.frag" />
+    <None Include="snow.geometry" />
+    <None Include="snow.vert" />
+    <None Include="standard_debug.frag" />
+    <None Include="standard_debug.vert" />
+    <None Include="standard_rain.frag" />
+    <None Include="standard_rain.vert" />
+    <None Include="standard_textured.frag" />
+    <None Include="standard_textured.vert" />
+    <None Include="terrain.frag" />
+    <None Include="terrain.geometry" />
+    <None Include="terrain.vert" />
+    <None Include="water.frag" />
+    <None Include="water.geometry" />
+    <None Include="water.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
